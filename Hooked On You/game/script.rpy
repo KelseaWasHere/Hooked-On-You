@@ -4,7 +4,8 @@
 # name of the character.
 
 define e = Character("Eileen")
-
+define m = Character("Marea")
+define c = Character("Caspian")
 
 # The game starts here.
 
@@ -20,13 +21,14 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    show marea neutral at right
+    show caspian neutral at left 
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    m "Test 1" 
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    c "Test 2"
 
     # This ends the game.
 
