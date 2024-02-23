@@ -26,10 +26,41 @@ label start:
 
     # These display lines of dialogue.
 
+    "Narrator Test"
     m "Test 1" 
-
     c "Test 2"
+
+    menu: 
+
+        "This is a menu test..."
+
+        "Response to Caspian": 
+            jump caspian_response 
+
+        "Response to Marea":
+            jump marea_response 
+        
+
+label marea_response: 
+            "I responded to Marea."
+
+            m "Yippee!"
+
+            jump back
+
+
+    
+label caspian_response: 
+        "I responded to Caspian."
+
+        c "Yippee!"
+
+        jump back
+
+label back: 
+        "We're back from the menu. "
+
 
     # This ends the game.
 
-    return
+return

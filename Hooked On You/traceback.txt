@@ -1,0 +1,22 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 41, in script
+    jump marea_response
+ScriptError: could not find label 'marea_response'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 41, in script
+    jump marea_response
+  File "C:\Users\kelse\OneDrive\Desktop\renpy-8.2.0-sdk\renpy\ast.py", line 1698, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\kelse\OneDrive\Desktop\renpy-8.2.0-sdk\renpy\script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'marea_response'.
+
+Windows-10-10.0.22631 AMD64
+Ren'Py 8.2.0.24012702
+Hooked On You 1.0
+Fri Feb 23 13:09:14 2024
