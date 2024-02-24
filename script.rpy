@@ -160,6 +160,63 @@ label gym:
     n "You tell Caspian and Marea goodnight, and head home for the night." 
 
     scene black 
+    n "The next day, you go back to the dock."
+    scene dock
+    n "As you approach, you see Marea and Caspian sitting on the dock talking. They seem to get quiet when you arrive."
+    n "They both smile and wave at you."
+    y "So, what's the plan for today?"
+    n "They both smile and outstretch their hands. When you take them, they once again drag you into your watery grave of love."
+    scene underwater 
+    n "With another peck, you are able to see and breathe again."
+    c "We actually both have different errands to run today. I have to go to the store to get candy and a new ball for water polo!" # happy
+    m "And I need to get seaweed for my three seaweed smoking girlfriends!" # happy
+
+    menu: 
+        "Go with Caspian":
+            jump caspianend
+
+        "Go with Marea":
+            jump mareaend
+
+label caspianend:
+    c "Alright let’s go!" # happy
+    m "I’ll see you guys later!" # happy
+    scene store
+    c "Have you ever had Swedish Fish?"
+    y "Yeah, like... above water..."
+    c "Wait, where is it?" #confused
+    y "Where is what?"
+    c "I lost my wallet…" # sad
+    y "That's okay, I’ll pay for it."
+    c "Do you have any sea dollars?" #neutral
+    n "You do not have any sea dollars."
+    y "...No..."
+    c "Aww, I can’t believe I lost my wallet."
+    y  "Well, do you remember a while ago how I told you about shoplifting?"
+    c "I get your implication, hold on."
+    n "As you stand watch, Caspian shoves Swedish Fish into your pocket, which turns out to just be actual fish."
+    n "They try to swim out but you get a good grasp." 
+    c"Alright, you leave first. I’ll join in a few minutes." 
+    n"You leave the store without any questions and a few minutes later you meet up with Caspian." 
+    c "I’m so glad that worked!" #happy
+    n "As Caspian eats the Swedish fish, you mention to eat them on the beach instead."
+    c "That sounds wonderful!" #flustered
+    n "As you both swim up to the beach, he eats his Swedish Fish."
+    c "You know, you’re really special to me, right? I'd really like to do this again. Can we?" 
+    y "Of course, you’re special to me too. Let's do this again!"
+
+    scene handholding
+    pause 5.0 
+    
+    jump end
+
+
     
     
-    return
+    
+label mareaend:
+    "needs to be writen"
+    jump end
+
+label end:
+    return 
