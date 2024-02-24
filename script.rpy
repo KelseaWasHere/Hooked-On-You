@@ -6,6 +6,8 @@
 define m = Character("Marea")
 define c = Character("Caspian")
 define y = Character("You")
+define n = Character("Narrator")
+define cm = Character("Caspian and Marea")
 
 # The game starts here.
 
@@ -18,8 +20,8 @@ label start:
     y "Oh boy, I can't wait to see my best friend!"
     y "Who is also a mermaid!"
 
-    "You walk up to the dock. Orange hair peeks out from the end of the dock."
-    "You walk over to see your fishy friend smiling at you."
+    n "You walk up to the dock. Orange hair peeks out from the end of the dock."
+    n "You walk over to see your fishy friend smiling at you."
 
     show c at left 
 
@@ -29,7 +31,7 @@ label start:
     c "Hey... why did the professor write on the window?"
     y "Why?"
     c "Because they wanted their lesson to be clear!" #happy
-    "..."
+    n "..."
     y "Hilarious."
     y "Anyways, you said last time that you wanted to show me something. What is it?"
     c "Oh yeah! You know how my father campaigns against humans, saying they’re all fish hungry lunatics?" #happy 
@@ -37,21 +39,21 @@ label start:
     c "I decided that I will prove him wrong by showing humans and mermaids CAN have good relationships!" 
     y "Man, you have daddy issues."
     c "Shut upppp!" #angry
-    "Caspian sighs."
+    n "Caspian sighs."
     c "will you help me with this?" # sad
     y "You know me, I’ll help you anytime, anywhere."
     c "Thank you thank you! That being said, lean down real quick!"
     y "Ok…"
-    "As you lean down, Caspian drags you into the water, and through the blurry water you see him peck your nose, and now your vision is completely clear." 
+    n "As you lean down, Caspian drags you into the water, and through the blurry water you see him peck your nose, and now your vision is completely clear." 
     scene underwater 
     show c at center
     y "What happened?"
     c "teehee I gave you a life bubble, it took me a really long time to learn how to do it!"
-    "As you look around you realize that you are in fact underwater with a bubble around your head. Neat!"
+    n "As you look around you realize that you are in fact underwater with a bubble around your head. Neat!"
     c "Anyways, there’s someone I want you to meet! This is Marea!"
     show m at left 
     show c at right
-    "A buff shark mermaid swims up to you. An air of cockiness surrounds her."
+    n "A buff shark mermaid swims up to you. An air of cockiness surrounds her."
     y "Uh, hi! I'm-"
     m  "‘Sup nerd, heard you like books and stuff." #happy
     y "Yes I do! It’s always been my dream to learn more about the ocean!"
@@ -82,7 +84,7 @@ label goodm:
 
 label back: 
     m "Seeing a human is really interesting, never thought you’d be so stubby." #neutral
-    "You frown."
+    n "You frown."
     m "Nono not in a…!"#sad
     m "I meant it in a cute way." #sad
     m "Anyways, Caspian are you going to your game later this week?" #neutral
@@ -91,12 +93,73 @@ label back:
     c "You know, you always know how to “raise” the bar!"
     m "Yeah, that’s how weight lifting works..?" #confused
     c "…never mind! Teehee."
-    "As the water gets darker and darker you realize you should head home."
+    n "As the water gets darker and darker you realize you should head home."
     y "Hey I should head out, but see you guys tomorrow?"
     c "Of course!"
     m "See you then."
 
-    
+    # DAY 2
+    scene black 
+    n "Bright and early in the morning you arrive to head to Marea’s weight lifting competition. You now see orange and blue hair sticking out the water."
+    scene dock
+    n "As you approach you now have two smiling faces looking at you."
+    m "Bend over!" #happy
+    y "Whoa!"
+    m "You know what I mean!"
+    n "As you bend over, you get dragged down by two sets of hands and once again receive a smooch on the nose."
+    scene underwater
+    y "You know, if you keep kissing me, I’ll fall for you."
+    c "Guess you’ll need a bandaid!" #happy
+    m "Ugh, stop flirting already and watch how big my muscles are!"
+    n "Marea grabs you and Caspian, dragging you to a gym. When you arrive a bunch of mermaids stare at you, confused and some scared of you. But most just glance at Marea as their worries lessen."
+
+    scene gym
+    m "Are you ready to see the best lifting of your life?" 
+    c "The best lifting I’ve seen is when Mr. SquarePants lifted his rating by showing his humble beginnings as a fry cook!"
+    y "That seems familiar…"
+    c "My dad hates him, but that’s only because Mr. SquarePants can run a better campaign than him." #angry
+    c "I am SO tired of hearing my dad complain about such a wholesome politician."
+    m "Those are so hard to come across these days…"
+    n "These underwater politics are very hard for you to follow, so you just sit and listen to Caspian and Marea talk of the prosperity of SpongeBob SquarePants's political career." 
+    n "Another mermaid calls out to Marea that it's her turn to compete." 
+    m "That’s me! Wish me luck!" # happy
+    n "As Marea swims up to the podium to lift, you can feel Caspian is tense. You turn to him and he most certainly has no poker face." 
+    n "He makes eye contact with you and immediately tells you what’s on his mind."
+    c "Do you think we can really prove my dad wrong?" # sad
+
+    menu: 
+        "Of course! We can overcome everything!":
+            jump encourage
+        "Yeah, let's just focus on Marea's competition.":
+            jump dismissive
+
+label encourage: 
+    c "Thank you.. You always know what to say to make me feel better..." #flustered
+    jump gym
+
+label dismissive: 
+    c "You're right. That's such a future problem!" # neutral
+    jump gym
+
+label gym:
+    n "Later, Marea returns from her podium, bringing over a first place medal."
+    m "Did you see how much I lifted? I even did my personal best! 230!" #flustered
+    c "You did so good!" # happy
+    m "Thank you so much!" # happy
+    c "Hey, have you ever used a magnifying glass?"
+    m "No, why?" #confused
+    c "So you can focus on your gains!" 
+    m " ??? No, I use a calendar for that." # confused
+    c   "Nevermind! Teehee." 
+    m "...Okay..."
+    y "Anyways, it’s getting late and I can kinda tell that my presence is a… bit of a bother." 
+    y "I should head back. Can you show me the way to the dock?" 
+    cm "Of course!"
+    scene underwater
+    n "As you three head back, you can feel tensions melt as you get further away from the other mermaids."
+    n "You tell Caspian and Marea goodnight, and head home for the night." 
+
+    scene black 
     
     
     return
