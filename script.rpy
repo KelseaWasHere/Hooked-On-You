@@ -51,17 +51,20 @@ label start:
     c "teehee I gave you a life bubble, it took me a really long time to learn how to do it!"
     n "As you look around you realize that you are in fact underwater with a bubble around your head. Neat!"
     c "Anyways, there’s someone I want you to meet! This is Marea!"
-    show m at left 
+    show marea neutral at left 
     show c at right
     n "A buff shark mermaid swims up to you. An air of cockiness surrounds her."
     y "Uh, hi! I'm-"
+    show marea happy at left
     m  "‘Sup nerd, heard you like books and stuff." #happy
+    show marea neutral at left
     y "Yes I do! It’s always been my dream to learn more about the ocean!"
     m "That’s… cool I guess."
     m "I like wrestling alligators!"
     m "So… as a human, do you… y’know… have a thing called “tea parties?”" #confused
     y "…Tea parties? I mean, yes, I guess." 
     m "SO you really mean you just sit around, drinking crushed up leaves?!"
+    show marea happy at left
     m "Well guess I can’t say much, I got three seaweed smoking girlfriends..." #happy
     y "Wow... by the way..."
 
@@ -73,24 +76,30 @@ label start:
             jump goodm
 
 label goodc:
+    show marea mad at left
     m "You know humans don't look that tasty." #angry
     m "ESPECIALLY you."
     c "BWAHAHAHAHAHA!" # happy
     jump back
 
 label goodm:
+    show marea happy at left
     m "Thanks, I cut it myself!" # happy
     jump back
 
-label back: 
+label back:
+    show marea neutral at left
     m "Seeing a human is really interesting, never thought you’d be so stubby." #neutral
     n "You frown."
     m "Nono not in a…!"#sad
     m "I meant it in a cute way." #sad
+    show marea neutral at left
     m "Anyways, Caspian are you going to your game later this week?" #neutral
     c "Of course, you know I’d never give up water polo." #happy
+    show marea happy at left
     m "And both of you should come to my competition tomorrow, I can bench 225 EASY." #happy
     c "You know, you always know how to “raise” the bar!"
+    show marea neutral at left
     m "Yeah, that’s how weight lifting works..?" #confused
     c "…never mind! Teehee."
     n "As the water gets darker and darker you realize you should head home."
@@ -103,8 +112,10 @@ label back:
     n "Bright and early in the morning you arrive to head to Marea’s weight lifting competition. You now see orange and blue hair sticking out the water."
     scene dock
     n "As you approach you now have two smiling faces looking at you."
+    show marea happy at left
     m "Bend over!" #happy
     y "Whoa!"
+    show marea neutral at left
     m "You know what I mean!"
     n "As you bend over, you get dragged down by two sets of hands and once again receive a smooch on the nose."
     scene underwater
@@ -114,6 +125,7 @@ label back:
     n "Marea grabs you and Caspian, dragging you to a gym. When you arrive a bunch of mermaids stare at you, confused and some scared of you. But most just glance at Marea as their worries lessen."
 
     scene gym
+    show marea neutral at left
     m "Are you ready to see the best lifting of your life?" 
     c "The best lifting I’ve seen is when Mr. SquarePants lifted his rating by showing his humble beginnings as a fry cook!"
     y "That seems familiar…"
@@ -121,7 +133,8 @@ label back:
     c "I am SO tired of hearing my dad complain about such a wholesome politician."
     m "Those are so hard to come across these days…"
     n "These underwater politics are very hard for you to follow, so you just sit and listen to Caspian and Marea talk of the prosperity of SpongeBob SquarePants's political career." 
-    n "Another mermaid calls out to Marea that it's her turn to compete." 
+    n "Another mermaid calls out to Marea that it's her turn to compete."
+    show marea happy at left
     m "That’s me! Wish me luck!" # happy
     n "As Marea swims up to the podium to lift, you can feel Caspian is tense. You turn to him and he most certainly has no poker face." 
     n "He makes eye contact with you and immediately tells you what’s on his mind."
@@ -143,10 +156,13 @@ label dismissive:
 
 label gym:
     n "Later, Marea returns from her podium, bringing over a first place medal."
+    show marea neutral at left
     m "Did you see how much I lifted? I even did my personal best! 230!" #flustered
     c "You did so good!" # happy
+    show marea happy at left
     m "Thank you so much!" # happy
     c "Hey, have you ever used a magnifying glass?"
+    show marea neutral at left
     m "No, why?" #confused
     c "So you can focus on your gains!" 
     m " ??? No, I use a calendar for that." # confused
@@ -169,6 +185,7 @@ label gym:
     scene underwater 
     n "With another peck, you are able to see and breathe again."
     c "We actually both have different errands to run today. I have to go to the store to get candy and a new ball for water polo!" # happy
+    show marea happy at left
     m "And I need to get seaweed for my three seaweed smoking girlfriends!" # happy
 
     menu: 
@@ -180,6 +197,7 @@ label gym:
 
 label caspianend:
     c "Alright let’s go!" # happy
+    show marea happy at left
     m "I’ll see you guys later!" # happy
     scene store
     c "Have you ever had Swedish Fish?"
