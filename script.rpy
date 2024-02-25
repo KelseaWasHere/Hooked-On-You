@@ -249,14 +249,15 @@ label caspianend:
     c "You know, you’re really special to me, right? I'd really like to do this again. Can we?" 
     y "Of course, you’re special to me too. Let's do this again!"
 
-    scene handholding
+    scene beach
+    show handholding at center
     pause 5.0 
     
     jump end
     
 label mareaend:
     show marea happy at left
-    show caspian neutral at rigth 
+    show caspian neutral at right 
     m "Awesome, let's go!" # happy
     show caspian happy at right
     c "I'll see you guys later!" # happy
@@ -306,7 +307,8 @@ label idk:
     show marea flustered at left
     m "Thank you..." # flustered
 
-    scene handholding
+    scene beach
+    show handholding at center
     pause 5.0
     jump end
 
