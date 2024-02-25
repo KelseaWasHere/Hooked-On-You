@@ -12,7 +12,7 @@ define cm = Character("Caspian and Marea")
 # The game starts here.
 
 label start:
-
+    play music "music.mp3" loop
     "You and Caspian are meeting at the docks to hang out like they do every weekend."
 
     scene dock
