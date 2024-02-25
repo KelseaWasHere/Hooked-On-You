@@ -159,7 +159,7 @@ label back:
             jump dismissive
 
 label encourage:
-    show caspisan flustered at center
+    show caspian flustered at center
     c "Thank you.. You always know what to say to make me feel better..." #flustered
     jump gym
 
